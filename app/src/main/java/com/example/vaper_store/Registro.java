@@ -42,8 +42,7 @@ public class Registro extends AppCompatActivity {
         btnIngresar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Acción al hacer clic en el botón Ingresar
-                // Redirigir a la pantalla de inicio de sesión (LoginActivity)
+
                 Intent intent = new Intent(Registro.this, Login.class);
                 startActivity(intent);
             }

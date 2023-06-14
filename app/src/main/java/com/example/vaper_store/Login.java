@@ -10,7 +10,8 @@ import android.widget.EditText;
 
 public class Login extends AppCompatActivity {
     private EditText etCorreoLogin, etContraseñaLogin;
-    private Button btnIngresarLogin;
+     Button btnIngresarLogin,btnregistrarase;
+
 
 
 
@@ -21,7 +22,9 @@ public class Login extends AppCompatActivity {
         etCorreoLogin = findViewById(R.id.etCorreoLogin);
         etContraseñaLogin = findViewById(R.id.etContraseñaLogin);
         btnIngresarLogin = findViewById(R.id.btnIngresarLogin);
-        btnIngresarLogin.setOnClickListener(new View.OnClickListener() {
+        btnregistrarase = findViewById(R.id.btnregistrarase);
+
+                btnIngresarLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // Acción al hacer clic en el botón Ingresar
@@ -41,5 +44,15 @@ public class Login extends AppCompatActivity {
                // }
             //}
         });
+        btnregistrarase.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(Login.this, Registro.class);
+                startActivity(intent);
+            }
+        });
+
+
     }
 }
