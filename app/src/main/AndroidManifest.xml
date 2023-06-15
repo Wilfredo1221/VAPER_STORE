@@ -7,24 +7,26 @@
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@drawable/vapercal"
-        android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/Theme.VAPER_STORE"
         tools:targetApi="31" >
         <activity
             android:name=".Menu"
+            android:label="Menu"
             android:exported="false" />
         <activity
             android:name=".Carrito"
             android:exported="false" />
         <activity
             android:name=".Login"
+            android:label="Login"
             android:exported="false" />
         <activity
             android:name=".Registro"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
+            android:label="VAPER STORE"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -8,10 +8,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.example.vaper_store.ui.DataBase.DBClientes;
+
 public class Login extends AppCompatActivity {
     private EditText etCorreoLogin, etContraseñaLogin;
      Button btnIngresarLogin,btnregistrarase;
-
+    private DBClientes databaseHelper;
 
 
 
@@ -23,7 +25,7 @@ public class Login extends AppCompatActivity {
         etContraseñaLogin = findViewById(R.id.etContraseñaLogin);
         btnIngresarLogin = findViewById(R.id.btnIngresarLogin);
         btnregistrarase = findViewById(R.id.btnregistrarase);
-
+        databaseHelper = new DBClientes(this);
                 btnIngresarLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

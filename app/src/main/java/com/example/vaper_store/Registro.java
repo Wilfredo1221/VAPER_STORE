@@ -8,6 +8,10 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
+
+import com.example.vaper_store.ui.DataBase.DBClientes;
+
 
 
 
@@ -30,13 +34,29 @@ public class Registro extends AppCompatActivity {
 
         btnRegistrar.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                String nombre = etNombre.getText().toString();
-                String correo = etCorreo.getText().toString();
-                String direccion = Password.getText().toString();
+            public void onClick(View view) {
 
-                // Aquí puedes realizar las operaciones de registro
-                registrarUsuario(nombre, correo, direccion);
+                if(!etNombre.getText().toString().equals("") && !etCorreo.getText().toString().equals("")) {
+
+                    DBClientes dbClientes = new DBClientes(Registro.this);
+                    long id = dbClientes.insertarContacto(etNombre.getText().toString(), etCorreo.getText().toString(), Password.getText().toString());
+
+                    if (id > 0) {
+                        Toast.makeText(Registro.this, "REGISTRO GUARDADO", Toast.LENGTH_LONG).show();
+                        limpiar();
+                    } else {
+                        Toast.makeText(Registro.this, "ERROR AL GUARDAR REGISTRO", Toast.LENGTH_LONG).show();
+                    }
+                } else {
+                    Toast.makeText(Registro.this, "DEBE LLENAR LOS CAMPOS OBLIGATORIOS", Toast.LENGTH_LONG).show();
+                }
+                Intent intent = new Intent(Registro.this, Login.class);
+                startActivity(intent);
+            }
+            private void limpiar() {
+                etNombre.setText("");
+                etCorreo.setText("");
+                Password.setText("");
             }
         });
         btnIngresar.setOnClickListener(new View.OnClickListener() {
@@ -47,11 +67,5 @@ public class Registro extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-    }
-
-    private void registrarUsuario(String nombre, String correo, String direccion) {
-        // Aquí puedes implementar la lógica de registro de usuario
-        Log.d(TAG, "Registrando usuario: Nombre = " + nombre + ", Correo = " + correo + ", Dirección = " + direccion);
-        // Por ejemplo, puedes enviar los datos a un servidor
     }
 }
