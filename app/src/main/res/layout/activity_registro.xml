@@ -56,20 +56,31 @@
         app:layout_constraintTop_toBottomOf="@+id/Nombre"
         app:layout_constraintVertical_bias="0.0" />
 
+    <EditText
+        android:id="@+id/Password"
+        android:layout_width="297dp"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:hint="Contraseña"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toTopOf="@+id/btnRegistrar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Correo"
+        app:layout_constraintVertical_bias="0.462" />
+
     <Button
         android:id="@+id/btnRegistrar"
         android:layout_width="297dp"
         android:layout_height="50dp"
         android:layout_marginStart="104dp"
-        android:layout_marginTop="20dp"
         android:layout_marginEnd="104dp"
         android:layout_marginBottom="220dp"
         android:text="Registrar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.507"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Password" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/btnIngresar"
@@ -85,21 +96,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnRegistrar"
         app:layout_constraintVertical_bias="0.125" />
-
-    <EditText
-        android:id="@+id/Password"
-        android:layout_width="301dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="70dp"
-        android:layout_marginEnd="52dp"
-        android:ems="10"
-        android:inputType="textPassword"
-        android:text="pass"
-        app:layout_constraintBottom_toTopOf="@+id/btnRegistrar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Correo"
-        app:layout_constraintVertical_bias="0.261" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

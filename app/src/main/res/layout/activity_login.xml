@@ -30,17 +30,18 @@
         android:layout_width="324dp"
         android:layout_height="67dp"
         android:layout_marginStart="57dp"
-        android:layout_marginTop="252dp"
         android:layout_marginEnd="56dp"
         android:layout_marginBottom="22dp"
         android:hint="Correo electrónico"
-        app:layout_constraintBottom_toTopOf="@+id/etContraseñaLogin"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.538"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.373" />
 
     <EditText
-        android:id="@+id/etContraseñaLogin"
+        android:id="@+id/Password"
         android:layout_width="328dp"
         android:layout_height="68dp"
         android:layout_marginStart="57dp"
@@ -59,26 +60,24 @@
         android:layout_width="295dp"
         android:layout_height="51dp"
         android:layout_marginTop="19dp"
-        android:layout_marginBottom="289dp"
         android:text="Ingresar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.379"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etContraseñaLogin" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.632" />
 
     <Button
         android:id="@+id/btnregistrarase"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="152dp"
-        android:layout_marginEnd="151dp"
-        android:layout_marginBottom="289dp"
+        android:layout_width="142dp"
+        android:layout_height="48dp"
         android:text="registrar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnIngresarLogin"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.732" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

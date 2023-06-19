@@ -16,6 +16,7 @@
             android:exported="false" />
         <activity
             android:name=".Carrito"
+            android:label="Carrito"
             android:exported="false" />
         <activity
             android:name=".Login"
@@ -23,6 +24,7 @@
             android:exported="false" />
         <activity
             android:name=".Registro"
+            android:label="Registro"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

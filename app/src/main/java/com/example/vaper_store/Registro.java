@@ -4,15 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.vaper_store.ui.DataBase.DBClientes;
-
-
+import com.example.vaper_store.ui.DataBase.DataBaseCreate;
 
 
 public class Registro extends AppCompatActivity {
@@ -36,10 +33,10 @@ public class Registro extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                if(!etNombre.getText().toString().equals("") && !etCorreo.getText().toString().equals("")) {
+                if(!etNombre.getText().toString().equals("") && !etCorreo.getText().toString().equals("") && !Password.getText().toString().equals("")) {
 
-                    DBClientes dbClientes = new DBClientes(Registro.this);
-                    long id = dbClientes.insertarContacto(etNombre.getText().toString(), etCorreo.getText().toString(), Password.getText().toString());
+                    DataBaseCreate dataBaseCreate = new DataBaseCreate(Registro.this);
+                    long id = dataBaseCreate.insertarContacto(etNombre.getText().toString(), etCorreo.getText().toString(), Password.getText().toString());
 
                     if (id > 0) {
                         Toast.makeText(Registro.this, "REGISTRO GUARDADO", Toast.LENGTH_LONG).show();
