@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="#F5B1F3E9"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Registro">
@@ -12,17 +13,16 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginStart="99dp"
-        android:layout_marginTop="141dp"
         android:layout_marginEnd="99dp"
         android:text="Registro de Usuario"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@id/Nombre"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.441"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.006" />
+        app:layout_constraintVertical_bias="0.06" />
 
     <EditText
         android:id="@+id/Nombre"
@@ -31,14 +31,12 @@
         android:layout_marginStart="67dp"
         android:layout_marginTop="28dp"
         android:layout_marginEnd="67dp"
-        android:layout_marginBottom="486dp"
         android:hint="Nombre"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.51"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:layout_constraintVertical_bias="0.442" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.356" />
 
     <EditText
         android:id="@+id/Correo"
@@ -47,14 +45,13 @@
         android:layout_marginStart="67dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="67dp"
-        android:layout_marginBottom="404dp"
         android:hint="Correo Electrónico"
         android:inputType="textEmailAddress"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Nombre"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.462" />
 
     <EditText
         android:id="@+id/Password"
@@ -67,7 +64,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Correo"
-        app:layout_constraintVertical_bias="0.462" />
+        app:layout_constraintVertical_bias="0.415" />
 
     <Button
         android:id="@+id/btnRegistrar"
@@ -75,11 +72,10 @@
         android:layout_height="50dp"
         android:layout_marginStart="104dp"
         android:layout_marginEnd="104dp"
-        android:layout_marginBottom="220dp"
+        android:layout_marginBottom="196dp"
         android:text="Registrar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.507"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
@@ -89,12 +85,24 @@
         android:layout_marginStart="152dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="151dp"
-        android:layout_marginBottom="161dp"
         android:text="Ingresar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnRegistrar"
-        app:layout_constraintVertical_bias="0.125" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.798" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="158dp"
+        android:layout_height="144dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.166"
+        app:srcCompat="@drawable/vapercal" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

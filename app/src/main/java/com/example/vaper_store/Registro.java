@@ -36,7 +36,7 @@ public class Registro extends AppCompatActivity {
                 if(!etNombre.getText().toString().equals("") && !etCorreo.getText().toString().equals("") && !Password.getText().toString().equals("")) {
 
                     DataBaseCreate dataBaseCreate = new DataBaseCreate(Registro.this);
-                    long id = dataBaseCreate.insertarContacto(etNombre.getText().toString(), etCorreo.getText().toString(), Password.getText().toString());
+                    long id = dataBaseCreate.insertarcliente(etNombre.getText().toString(), etCorreo.getText().toString(), Password.getText().toString());
 
                     if (id > 0) {
                         Toast.makeText(Registro.this, "REGISTRO GUARDADO", Toast.LENGTH_LONG).show();

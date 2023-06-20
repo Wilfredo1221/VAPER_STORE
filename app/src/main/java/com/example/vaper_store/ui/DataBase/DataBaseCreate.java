@@ -11,10 +11,12 @@ public class DataBaseCreate extends SQLiteOpenHelper {
     private static final int DATABASE_VERSION = 2;
     private static final String DATABASE_NOMBRE = "Vapers.db";
     public static final String TABLE_CLIENTE = "Cliente";
+
     private static final String COLUMN_ID = "id";
     private static final String COLUMN_NOMBRE = "nombre";
     private static final String COLUMN_CORREO = "correo_electronico";
     private static final String COLUMN_PASSWORD = "password";
+
 
 
 
@@ -30,12 +32,12 @@ public class DataBaseCreate extends SQLiteOpenHelper {
                 "correo_electronico TEXT NOT NULL," +
                 "password VARCHARD NOT NULL)");
 
-
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
         sqLiteDatabase.execSQL("DROP TABLE " + TABLE_CLIENTE);
+
 
         onCreate(sqLiteDatabase);
     }
@@ -56,7 +58,7 @@ public class DataBaseCreate extends SQLiteOpenHelper {
 
     Context context;
 
-    public long insertarContacto(String nombre, String correo_electronico, String password) {
+    public long insertarcliente(String nombre, String correo_electronico, String password) {
         long id = 0;
 
         try {
@@ -74,5 +76,6 @@ public class DataBaseCreate extends SQLiteOpenHelper {
 
         return id;
     }
+
 }
 

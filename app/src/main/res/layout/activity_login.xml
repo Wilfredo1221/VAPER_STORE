@@ -2,28 +2,31 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="#80CBC4"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Login">
 
     <!-- Botón -->
+
     <TextView
         android:id="@+id/textView2"
         android:layout_width="98dp"
         android:layout_height="38dp"
         android:layout_gravity="center_horizontal"
         android:layout_marginStart="99dp"
-        android:layout_marginTop="141dp"
+        android:layout_marginTop="80dp"
         android:layout_marginEnd="99dp"
         android:text="LOGIN"
+        android:textAlignment="center"
         android:textSize="24sp"
         android:textStyle="bold"
-        android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.029" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <EditText
         android:id="@+id/etCorreoLogin"
@@ -35,10 +38,10 @@
         android:hint="Correo electrónico"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.538"
+        app:layout_constraintHorizontal_bias="0.576"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.373" />
+        app:layout_constraintVertical_bias="0.45" />
 
     <EditText
         android:id="@+id/Password"
@@ -52,8 +55,10 @@
         android:inputType="textPassword"
         app:layout_constraintBottom_toTopOf="@+id/btnIngresarLogin"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.533"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etCorreoLogin" />
+        app:layout_constraintTop_toBottomOf="@+id/etCorreoLogin"
+        app:layout_constraintVertical_bias="1.0" />
 
     <Button
         android:id="@+id/btnIngresarLogin"
@@ -63,10 +68,9 @@
         android:text="Ingresar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.379"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.632" />
+        app:layout_constraintVertical_bias="0.691" />
 
     <Button
         android:id="@+id/btnregistrarase"
@@ -75,9 +79,20 @@
         android:text="registrar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.527"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.732" />
+        app:layout_constraintVertical_bias="0.806" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="138dp"
+        android:layout_height="133dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.237"
+        app:srcCompat="@drawable/vapercal" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
