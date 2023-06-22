@@ -1,13 +1,13 @@
 package com.example.vaper_store;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.vaper_store.ui.DataBase.DataBaseCreate;
 
@@ -49,6 +49,7 @@ public class Registro extends AppCompatActivity {
                 }
                 Intent intent = new Intent(Registro.this, Login.class);
                 startActivity(intent);
+                finish();
             }
             private void limpiar() {
                 etNombre.setText("");

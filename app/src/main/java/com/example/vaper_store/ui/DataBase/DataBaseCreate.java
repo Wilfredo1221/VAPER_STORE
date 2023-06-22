@@ -11,7 +11,8 @@ public class DataBaseCreate extends SQLiteOpenHelper {
     private static final int DATABASE_VERSION = 2;
     private static final String DATABASE_NOMBRE = "Vapers.db";
     public static final String TABLE_CLIENTE = "Cliente";
-
+    public static final String TABLE_PRODUCTODESECHABLE = "Producto_Desechable";
+    public static final String TABLE_PRODUCTORECARGABLE = "Producto_Recargable";
     private static final String COLUMN_ID = "id";
     private static final String COLUMN_NOMBRE = "nombre";
     private static final String COLUMN_CORREO = "correo_electronico";
@@ -76,6 +77,21 @@ public class DataBaseCreate extends SQLiteOpenHelper {
 
         return id;
     }
-
+//    private void insertarProducto(SQLiteDatabase db, String nombre_producto, String informacion, float precio) {
+//        ContentValues values = new ContentValues();
+//        values.put(COLUMN_NOMBRE, nombre_producto);
+//        values.put(COLUMN_INFORMACION, informacion);
+//        values.put(COLUMN_PRECIO, precio);
+//
+//        db.insert(TABLE_PRODUCTODESECHABLE, null, values);
+//    }
+//    private void insertarProductos(SQLiteDatabase db, String nombre_producto2, String informacion2, float precio2) {
+//        ContentValues values = new ContentValues();
+//        values.put(COLUMN_NOMBRE, nombre_producto2);
+//        values.put(COLUMN_INFORMACION, informacion2);
+//        values.put(COLUMN_PRECIO, precio2);
+//
+//        db.insert(TABLE_PRODUCTODESECHABLE, null, values);
+//    }
 }
 

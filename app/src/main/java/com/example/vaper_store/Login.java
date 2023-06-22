@@ -1,7 +1,5 @@
 package com.example.vaper_store;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -11,7 +9,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.vaper_store.databinding.*;
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.vaper_store.databinding.ActivityLoginBinding;
 import com.example.vaper_store.ui.DataBase.DataBaseCreate;
 
 public class Login extends AppCompatActivity {
@@ -52,8 +52,9 @@ public class Login extends AppCompatActivity {
                         editor.putBoolean("isLoggedIn", true);
                         editor.apply();
 
-                        Intent intent = new Intent(Login.this, Menu.class);
+                        Intent intent = new Intent(Login.this, Menu1.class);
                         startActivity(intent);
+                        finish();
                     } else {
                         // Credenciales inválidas
                         Toast.makeText(Login.this, "Credenciales inválidas", Toast.LENGTH_SHORT).show();

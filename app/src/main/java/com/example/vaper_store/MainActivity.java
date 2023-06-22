@@ -1,7 +1,5 @@
 package com.example.vaper_store;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -10,6 +8,8 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.widget.ImageView;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.vaper_store.ui.DataBase.DataBaseCreate;
 
@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
 
                 if (isLoggedIn) {
                     // Usuario ya ha iniciado sesión, redirigir a la actividad del menú
-                    Intent intent = new Intent(MainActivity.this, Menu.class);
+                    Intent intent = new Intent(MainActivity.this, Menu1.class);
                     startActivity(intent);
                     finish(); // Opcional: Finalizar actividad principal para no volver atrás
                 } else {
